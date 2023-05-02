@@ -47,8 +47,6 @@ class GridComponent extends Component {
                     // properties
                     columnDefs={this.state.columnDefs}
                     rowData={this.props.rowData}
-
-                    reactNext={true}
                     reduxStore={this.context.store} // must be supplied when using redux with reactNext
 
                     // events

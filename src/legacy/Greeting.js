@@ -14,9 +14,10 @@ import {store} from '../store';
 
 import ThemeContext from './shared/ThemeContext';
 import Clock from './shared/Clock';
+import SimpleReduxDynamicExample from "./simpleReduxDynamicComponentExample/SimpleReduxExample";
 
 store.subscribe(() => {
-  console.log('Counter:', store.getState());
+  console.log("Counter:", store.getState());
 });
 
 class AboutSection extends Component {
@@ -28,16 +29,19 @@ class AboutSection extends Component {
   render() {
     return (
       <ThemeContext.Consumer>
-        {theme => (
-          <div style={{border: '1px dashed black', padding: 20}}>
+        {(theme) => (
+          <div style={{ border: "1px dashed black", padding: 20 }}>
             <h3>src/legacy/Greeting.js</h3>
-            <h4 style={{color: theme}}>
+            <h4 style={{ color: theme }}>
               This component is rendered by the nested React ({React.version}).
             </h4>
             <Clock />
+            <SimpleReduxDynamicExample />
             <p>
-              Counter: {this.props.counter}{' '}
-              <button onClick={() => this.props.dispatch({type: 'increment'})}>
+              Counter: {this.props.counter}{" "}
+              <button
+                onClick={() => this.props.dispatch({ type: "increment" })}
+              >
                 +
               </button>
             </p>

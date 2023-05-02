@@ -20,14 +20,14 @@ function AboutPage({counter, dispatch}) {
   return (
     <>
       <h2>src/modern/AboutPage.js</h2>
-      <h3 style={{color: theme}}>
+      <h3 style={{ color: theme }}>
         This component is rendered by the outer React ({React.version}).
       </h3>
       <Greeting />
       <br />
       <p>
-        Counter: {counter}{' '}
-        <button onClick={() => dispatch({type: 'increment'})}>+</button>
+        Counter: {counter}{" "}
+        <button onClick={() => dispatch({ type: "increment" })}>+</button>
       </p>
     </>
   );
